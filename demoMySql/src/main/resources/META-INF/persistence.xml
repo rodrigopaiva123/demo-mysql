@@ -5,8 +5,10 @@
     xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
     <persistence-unit name="demoPU" transaction-type="JTA">
-        <jta-data-source>Default JDBC Database</jta-data-source>
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <jta-data-source>MyMySQLDS</jta-data-source>
         <properties>
+            <!-- To persist data across app restarts change 'drop-and-create' to 'create' -->
             <property name="jakarta.persistence.schema-generation.database.action"
                 value="drop-and-create" />
         </properties>

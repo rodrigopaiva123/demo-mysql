@@ -1,0 +1,9 @@
+<resources>
+    <Resource id="myDataSource" type="DataSource">
+        JdbcDriver com.mysql.cj.jdbc.Driver
+        JdbcUrl jdbc:mysql://localhost:3306/demo_database?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=UTC
+        UserName YOUR_DB_USER_HERE
+        Password YOUR_PASSWORD_HERE
+        JtaManaged=true
+    </Resource>
+</resources>
